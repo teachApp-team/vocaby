@@ -1,5 +1,5 @@
 # Debianがベースのrubyイメージを指定
-FROM ruby:2.6
+FROM ruby:2.6.7
 
 # 必要なものをインストール
 RUN apt-get update -qq && apt-get -y install \
@@ -20,3 +20,4 @@ WORKDIR /app
 
 # 上でコピーしたGemfileに従ってGemをインストール
 RUN gem install bundler && bundle install
+# RUN bundle install

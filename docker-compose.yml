@@ -1,20 +1,21 @@
-version: '3'
+version: "3"
 services:
   db:
     image: mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: password
     ports:
-      - '3306:3306'
+      - "3306:3306"
     command: --default-authentication-plugin=mysql_native_password
     volumes:
       - vocaby-mysql-data:/var/lib/mysql
   front:
-    build: 
+    build:
       context: ./front/
       dockerfile: Dockerfile
     volumes:
       - ./front:/usr/src/app
+      - front-node_modules:/usr/src/app/node_modules
     command: sh -c "yarn start"
     ports:
       - "8000:3000"
@@ -33,3 +34,4 @@ services:
     tty: true
 volumes:
   vocaby-mysql-data:
+  front-node_modules:

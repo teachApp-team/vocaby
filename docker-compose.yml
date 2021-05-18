@@ -1,0 +1,35 @@
+version: '3'
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - '3306:3306'
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - vocaby-mysql-data:/var/lib/mysql
+  front:
+    build: 
+      context: ./front/
+      dockerfile: Dockerfile
+    volumes:
+      - ./front:/usr/src/app
+    command: sh -c "yarn start"
+    ports:
+      - "8000:3000"
+  api:
+    build:
+      context: ./api/
+      dockerfile: Dockerfile
+    volumes:
+      - ./api:/app
+    command: rails server -b 0.0.0.0
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+    stdin_open: true
+    tty: true
+volumes:
+  vocaby-mysql-data:

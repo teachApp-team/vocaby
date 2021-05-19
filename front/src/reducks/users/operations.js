@@ -13,7 +13,7 @@ export const signUp = (name, email, password, confirmPassword) => {
       return false
     }
 
-    axios.post("https://localhost:3000/signup",
+    axios.post("http://localhost:3000/signup",
       {
         name: name,
         email: email,

@@ -1,8 +1,12 @@
 import axios from 'axios';
 
-export const signUp = (username, email, password, confirmPassword) => {
+export const signUp = (name, email, password, confirmPassword) => {
   return () => {
-    if (username === "" || email === "" || password === "" || confirmPassword === "") {
+    console.log(name)
+    console.log(email)
+    console.log(password)
+    console.log(confirmPassword)
+    if (name === "" || email === "" || password === "" || confirmPassword === "") {
       return false
     }
     if (password !== confirmPassword) {
@@ -14,7 +18,7 @@ export const signUp = (username, email, password, confirmPassword) => {
         name: name,
         email: email,
         password: password,
-        password_confirmation: password_confirmation
+        password_confirmation: confirmPassword,
       }
     ).then(response => {
         console.log("registration complete")

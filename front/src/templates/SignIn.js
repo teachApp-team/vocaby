@@ -1,7 +1,12 @@
 import React, {useState, useCallback} from 'react';
 import TextInput from "../components/UIkit/TextInput";
+import PrimaryButton from "../components/UIkit/PrimaryButton";
+import {signIn} from '../reducks/users/operations';
+import {useDispatch} from "react-redux";
 
 const SignIn = () => {
+  const dispatch = useDispatch()
+
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
@@ -14,9 +19,8 @@ const SignIn = () => {
   },[]);
 
   return (
-      <div className="c-section-container">
-          <h2 className="u-text-center u-text__headline">ログイン</h2>
-          <div className="module-spacer--medium" />
+      <div>
+          <h2>ログイン</h2>
           <TextInput
               fullWidth={true} label={"メールアドレス"} multiline={false} required={true}
               rows={1} value={email} type={"email"} onChange={inputEmail}
@@ -25,6 +29,7 @@ const SignIn = () => {
               fullWidth={true} label={"パスワード"} multiline={false} required={true}
               rows={1} value={password} type={"password"} onChange={inputPassword}
           />
+          <PrimaryButton label={"ログイン"} onClick={() => dispatch(signIn(email, password))} />
       </div>
   );
 };

@@ -2,10 +2,14 @@ import React, {useState, useCallback} from 'react';
 import TextInput from "../components/UIkit/TextInput";
 import PrimaryButton from "../components/UIkit/PrimaryButton";
 import {signIn} from '../reducks/users/operations';
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {push} from 'connected-react-router';
 
 const SignIn = () => {
   const dispatch = useDispatch()
+  const selector  = useSelector((state) => state)
+
+  console.log(selector.users);
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -30,6 +34,8 @@ const SignIn = () => {
               rows={1} value={password} type={"password"} onChange={inputPassword}
           />
           <PrimaryButton label={"ログイン"} onClick={() => dispatch(signIn(email, password))} />
+          <PrimaryButton label={"新規登録"} onClick={() => dispatch(push("/signup"))} />
+          <PrimaryButton label={"トップページ"} onClick={() => dispatch(push("/top"))} />
       </div>
   );
 };

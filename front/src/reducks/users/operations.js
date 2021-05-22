@@ -1,4 +1,5 @@
 import axios from 'axios';
+import {signInAction} from "./action";
 
 export const signUp = (name, email, password, confirmPassword) => {
   return () => {
@@ -15,7 +16,8 @@ export const signUp = (name, email, password, confirmPassword) => {
         email: email,
         password: password,
         password_confirmation: confirmPassword,
-      }
+      },
+      { withCredentials: true }
     ).then(response => {
         console.log("registration complete")
     }).catch(error => {
@@ -25,7 +27,7 @@ export const signUp = (name, email, password, confirmPassword) => {
 }
 
 export const signIn = (email, password) => {
-  return () => {
+  return (dispatch) => {
     if (email === "" || password === "") {
       return false
     }
@@ -34,12 +36,28 @@ export const signIn = (email, password) => {
       {
         email: email,
         password: password,
-      }
+      },
+      { withCredentials: true }
     ).then(response => {
       console.log("login complete")
-      console.log(response)
+      const user = response.data.user.name
+      dispatch(signInAction({
+        isSignedIn: true,
+        name: user
+      }))
+
     }).catch(error => {
       console.log("login failure")
+    })
+  }
+}
+
+export const listenAuthState = () => {
+  return (dispatch) => {
+    axios.get("http://localhost:3000/logged_in", { withCredentials: true }).then(response => {
+      console.log("Auth Check...");
+      const logged_in = response.data.logged_in
+      console.log(logged_in);
     })
   }
 }

@@ -1,0 +1,40 @@
+.learning-conditions-container {
+  width: 100%;
+  padding-bottom: 30px;
+  background-color: #d3a760;
+}
+
+.learning-condition-title {
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.learning-condition-title > h3 {
+  color: #95681f;
+}
+
+.learning-condtions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.learning-condtion {
+  width: 85px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.learning-condtion > p {
+  font-weight: bold;
+  color: #95681f;
+}
+
+.circle {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #95681f;
+  text-align: center;
+  line-height: 80px;
+}

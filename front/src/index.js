@@ -7,6 +7,7 @@ import './index.css';
 import * as History from 'history';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './assets/top.css';
 
 const history = History.createBrowserHistory();
 export const store = createStore(history);

@@ -57,7 +57,13 @@ export const listenAuthState = () => {
     axios.get("http://localhost:3000/logged_in", { withCredentials: true }).then(response => {
       console.log("Auth Check...");
       const logged_in = response.data.logged_in
+      const name = response.data.user.name
       console.log(logged_in);
+      console.log(name);
+      dispatch(signInAction({
+        isSignedIn: true,
+        name: name
+      }))
     })
   }
 }

@@ -2,11 +2,13 @@ import React, {useState, useCallback} from 'react';
 import TextInput from "../components/UIkit/TextInput";
 import PrimaryButton from "../components/UIkit/PrimaryButton";
 import {signUp} from '../reducks/users/operations';
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 
 const SignUp = () => {
   const dispatch = useDispatch()
+  const selector  = useSelector((state) => state)
 
+  console.log(selector.users);
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")

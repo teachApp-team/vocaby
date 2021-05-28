@@ -3,6 +3,7 @@ import {Route, Switch} from "react-router";
 import SignUp from "./templates/SignUp";
 import SignIn from "./templates/SignIn";
 import Top from "./templates/Top";
+import LevelShow from "./templates/LevelShow";
 import Auth from "./Auth";
 
 const Router = () => {
@@ -13,6 +14,7 @@ const Router = () => {
 
       <Auth>
         <Route exact path="/top" component={Top}/>
+        <Route exact path="/show" component={LevelShow}/>
       </Auth>
     </Switch>
   )

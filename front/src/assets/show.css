@@ -1,0 +1,49 @@
+.level-info-container {
+  padding: 40px 20%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.level-title-show {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.level-condition-show {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.level-info-show {
+  width: 350px;
+  font-weight: bold;
+  margin: auto;
+}
+
+.level-show-container {
+  padding-bottom: 40px;
+}
+
+.already-level {
+  background-color: #db6a6a;
+}
+
+.already-level .level-condition {
+  color: #8a1010;
+}
+
+.notyet-level {
+  background-color: #86b1c1;
+}
+
+.notyet-level .level-condition {
+  color: #3a687e;
+}
+
+.middle-level {
+  background-color: #d3a760;
+}
+
+.middle-level .level-condition {
+  color: #95681f;
+}

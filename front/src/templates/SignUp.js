@@ -2,6 +2,8 @@ import React, {useState, useCallback} from 'react';
 import TextInput from "../components/UIkit/TextInput";
 import PrimaryButton from "../components/UIkit/PrimaryButton";
 import {signUp} from '../reducks/users/operations';
+import {useDispatch} from "react-redux";
+import ChoiceButton from '../components/UIkit/ChoiceButton';
 import {useDispatch, useSelector} from "react-redux";
 
 const SignUp = () => {
@@ -58,6 +60,7 @@ const SignUp = () => {
         label={"アカウントを登録する"}
         onClick={handleClick}
       />
+      <ChoiceButton bgColor="#D3A760" text="りんご" textColor="#000" />
     </div>
   )
 }

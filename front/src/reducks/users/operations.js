@@ -40,13 +40,14 @@ export const signIn = (email, password) => {
       { withCredentials: true }
     ).then(response => {
       console.log("login complete")
-      const user = response.data.user.name
+      const user = response.data?.user?.name
       dispatch(signInAction({
         isSignedIn: true,
         name: user
       }))
 
     }).catch(error => {
+      console.log(error)
       console.log("login failure")
     })
   }
@@ -57,7 +58,7 @@ export const listenAuthState = () => {
     axios.get("http://localhost:3000/logged_in", { withCredentials: true }).then(response => {
       console.log("Auth Check...");
       const logged_in = response.data.logged_in
-      const name = response.data.user.name
+      const name = response.data?.user?.name
       console.log(logged_in);
       console.log(name);
       dispatch(signInAction({

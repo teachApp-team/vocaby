@@ -47,3 +47,68 @@
 .middle-level .level-condition {
   color: #95681f;
 }
+
+.word-list-link {
+  padding: 10px 80px 0px 0px;
+}
+
+.word-list-link > div {
+  text-align: end;
+  font-weight: bold;
+}
+
+.level-condition-container {
+  border-radius: 10px;
+  background-color: #d3a760;
+  padding: 10px 20px;
+  text-align: center;
+  max-width: 550px;
+  margin: 40px auto;
+}
+
+.level-condition-container > div {
+  margin: 20px;
+}
+
+.level-condition-container span {
+  font-weight: bold;
+  color: #95681f;
+  margin: 20px;
+}
+
+.level-button-container > h3 {
+  margin: 80px auto;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.level-button-group {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.level-button-group > div {
+  margin-bottom: 30px;
+}
+
+.wordtest-button {
+  padding: 15px 20px;
+  width: 200px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.notyet-wordtest-button {
+  background-color: #86b1c1;
+  color: #3a687e;
+}
+
+.wrong-wordtest-button {
+  background-color: #d3a760;
+  color: #95681f;
+}
+
+.all-wordtest-button {
+  background-color: gainsboro;
+  color: gray;
+}

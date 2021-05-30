@@ -15,6 +15,11 @@ const LevelInfo = (props) => {
       <div className="level-info-show">
         {props.info}
       </div>
+      <div className="word-list-link">
+        <div>
+          単語一覧>>
+        </div>
+      </div>
       </>
     )
   }

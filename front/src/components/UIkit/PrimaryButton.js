@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) =>
             fontSize: 16,
             height: 48,
             marginBottom: 16,
-            width: 256,
+            width: 280,
         }
     })
 )

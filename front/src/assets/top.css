@@ -1,7 +1,24 @@
+.study-middle-container {
+  width: 100%;
+  background-color: #3a687e;
+  text-align: center;
+  padding: 1px 0px;
+  margin-bottom: 40px;
+}
+
+.study-middle-container > h3 {
+  color: #86b1c1;
+}
+
 .learning-conditions-container {
   width: 100%;
   padding-bottom: 30px;
   background-color: #d3a760;
+}
+
+.level-container {
+  width: 100%;
+  margin: 40px 0px;
 }
 
 .learning-condition-title {
@@ -37,4 +54,58 @@
   background: #95681f;
   text-align: center;
   line-height: 80px;
+}
+
+.level-card {
+  width: 85px;
+  height: 110px;
+  text-align: center;
+  padding-top: 1px;
+}
+
+.level-card-already {
+  background-color: #db6a6a;
+}
+
+.level-card-already .condition {
+  color: #8a1010;
+}
+
+.level-card-yet {
+  background-color: #86b1c1;
+}
+
+.level-card-yet .condition {
+  color: #3a687e;
+}
+
+.level-card-middle {
+  background-color: #d3a760;
+}
+
+.level-card-middle .condition {
+  color: #95681f;
+}
+
+/* react-slider関連 */
+.slick-list {
+  padding-left: 50px;
+}
+
+.slick-slider .slick-prev {
+  left: 10px;
+}
+.slick-slider .slick-next {
+  right: 10px;
+}
+
+.slick-slider .slick-prev,
+.slick-slider .slick-next {
+  z-index: 100;
+}
+
+.slick-slider .slick-prev::before,
+.slick-slider .slick-next::before {
+  font-size: 28px;
+  color: black;
 }

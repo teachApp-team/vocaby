@@ -2,7 +2,6 @@ import React, {useState, useCallback} from 'react';
 import TextInput from "../components/UIkit/TextInput";
 import PrimaryButton from "../components/UIkit/PrimaryButton";
 import {signUp} from '../reducks/users/operations';
-import {useDispatch} from "react-redux";
 import ChoiceButton from '../components/UIkit/ChoiceButton';
 import {useDispatch, useSelector} from "react-redux";
 

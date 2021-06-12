@@ -2,7 +2,6 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import LevelInfo from '../components/Show/LevelInfo';
 import Button from '../components/Show/Button';
-import PrimaryButton from "../components/UIkit/PrimaryButton";
 
 const LevelShow = () => { 
   return (

@@ -9,6 +9,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './assets/top.css';
 import './assets/show.css';
+import './assets/test.css';
 
 const history = History.createBrowserHistory();
 export const store = createStore(history);

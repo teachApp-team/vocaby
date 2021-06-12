@@ -1,0 +1,43 @@
+.progressbar-container {
+  margin-top: 20px;
+}
+
+.question-container {
+  margin: 2em 10%;
+  position: relative;
+  padding: 0.5em 1.5em;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+}
+.question-container:before,
+.question-container:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 2px;
+  height: -webkit-calc(100% + 20px);
+  height: calc(100% + 20px);
+  background-color: black;
+}
+.question-container:before {
+  left: 10px;
+}
+.question-container:after {
+  right: 10px;
+}
+.question-container p {
+  margin: 0;
+  padding: 0;
+}
+
+.question-container > .quesiton {
+  text-align: center;
+}
+
+.question-container > .part {
+  text-align: center;
+}
+
+.alternative-container {
+  text-align: center;
+}
